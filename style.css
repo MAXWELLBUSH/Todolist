@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right,#00abf0,purple);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: aqua;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.4em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+form input {
+    width: 60%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+form button {
+    padding: 2em;
+    margin-left: 0.5rem;
+    background-color: white;
+    color: aqua;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+    background-color: aqua;
+    color: white;
+}
+
+.todolist {
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0;
+    width: 60%;
+
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+    font-size: 1.5em;
+}
+
+.todo.completed .todo-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo .actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.todo .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+.todo .actions button:hover {
+    color: red;
+}
+
+.todo.slide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color: red;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.2em;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: aqua;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.35s ease;
+}
+
+.select:hover::after {
+    background-color: aquamarine;
+}
